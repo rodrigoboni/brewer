@@ -1,5 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<!-- dados e versão do projeto -->
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.algaworks</groupId>
 	<artifactId>brewer</artifactId>
@@ -9,19 +11,23 @@
 	<description>Brewer Project</description>
 
 	<properties>
+		<!-- encoding do projeto -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+		<!-- ignorar arquivo web.xml -->
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 
+		<!-- vars para gerenciar versões -->
 		<java.version>1.8</java.version>
 		<maven-compiler-pluging.version>3.2</maven-compiler-pluging.version>
 		<spring-framework.version>4.3.0.RELEASE</spring-framework.version>
 		<servlet.version>3.1.0</servlet.version>
-		<thymeleaf.version>3.0.0.RELEASE</thymeleaf.version>
+		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
 		<hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
 	</properties>
 
+	<!-- compilador maven -->	
 	<build>
 		<plugins>
 			<plugin>
@@ -35,6 +41,7 @@
 		</plugins>
 	</build>
 
+	<!-- gerenciador de dependências p/ garantir compatibilidade -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -48,11 +55,13 @@
 	</dependencyManagement>
 
 	<dependencies>
+		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 
+		<!-- servlet api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -60,6 +69,7 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- thymeleaf -->
 		<dependency>
 			<groupId>org.thymeleaf</groupId>
 			<artifactId>thymeleaf</artifactId>
@@ -72,6 +82,7 @@
 			<version>${thymeleaf.version}</version>
 		</dependency>
 		
+		<!-- hibernate validator -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-validator</artifactId>

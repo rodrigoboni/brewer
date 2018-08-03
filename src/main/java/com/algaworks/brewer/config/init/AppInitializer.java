@@ -11,17 +11,20 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
+		// config do dispatcher servlet
+		// configuração para servlet encontrar controllers da app
 		return new Class<?>[] {WebConfig.class};
 	}
 
 	@Override
 	protected String[] getServletMappings() {
+		// padrão de url atendidado pelo dispatcher servlet do spring
+		// "/" aceita qq url
 		return new String[] {"/"};
 	}
 
